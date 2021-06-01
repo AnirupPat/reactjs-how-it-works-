@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import Button from './components/UI/Button/Button';
+import DemoOutput from './components/Demo/DemoOutput';
 import './App.css';
 
 function App() {
   const [showParagraph, setShowParagraph] = useState(false);
-  console.log('Component re-rendered!')
+  console.log('App Component re-rendered!')
   const handleButtonClick = () => {
     setShowParagraph(prevState => !prevState);
   }
   return (
     <div className="app">
       <h1>Hi There!</h1>
-      {showParagraph && <p>This is brand new</p>}
+      <DemoOutput show={showParagraph} />
       <Button onClick={handleButtonClick}>Click</Button>
     </div>
   );
