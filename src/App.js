@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="app">
       <h1>Hi There!</h1>
-      <DemoOutput show={showParagraph} />
+      <DemoOutput show={false} />
       <Button onClick={handleButtonClick}>Click</Button>
     </div>
   );
